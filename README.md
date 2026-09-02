@@ -47,17 +47,24 @@ Assim que uma branch é enviada (push) com o padrão correto, o GitHub aplica au
 
 ##  Padrão de Commits e Issues
 
-### Padrão de Commits
-Adotamos o *Conventional Commits*. O desenvolvedor deve commitar usando o mesmo prefixo que está no título da sua Issue da tarefa.
-- `feat:` Nova funcionalidade
-- `fix:` Correção de bug
-- `chore:` Configurações, infraestrutura e CI/CD
-- `docs:` Documentação
+### 1. Como nomear as Issues
+Toda tarefa criada no board começa com o número da issue, o prefixo correspondente e o que vai ser feito.
+* **Formato:** `[Número]) [prefixo]: [O que será feito]`
+* **Exemplo:** `1.1) feat: Implementação do Header no Dashboard`
 
-### Padrão de Issues
-O título das Issues no GitHub deve seguir obrigatoriamente a estrutura:
-`[Número]) [prefixo]: [O que será feito]`
+### 2. Tabela de Prefixos para o dia a dia
+*   `feat:` — Criar uma nova funcionalidade
+*   `fix:` — Corrigir um bug
+*   `chore:` — Ajustes técnicos ou de configuração
+*   `docs:` — Mexer em documentação
+*   `refactor:` — Limpar ou reestruturar código sem mudar a regra
+*   `test:` — Escrever testes
+*   `ui:` — Mexer puramente na parte visual / estilo
 
-*Exemplos:*
-* `1.1) chore: Setup inicial da infraestrutura`
-* `2.1) feat: Criação da tela de login`
+### 3. Como exigir na hora do Commit
+O desenvolvedor deve commitar usando o **mesmo prefixo** da tarefa que ele pegou para fazer.
+
+*Exemplos corretos:*
+*   `git commit -m "feat: cria estrutura inicial do header"`
+*   `git commit -m "ui: ajusta alinhamento do carrossel"`
+*   `git commit -m "chore: adiciona arquivo mock de dados"`
